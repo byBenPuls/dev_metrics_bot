@@ -34,7 +34,7 @@ impress recruiters, or just track their own progress. DevMetricsBot does exactly
 ## 🧪 Example
 
 🧭 Start command:
-![Start command](assets/welcome.png)
+![Start command](assets/start.png)
 
 📊 Summary result:
 ![GitHub summary](assets/summary.png)
