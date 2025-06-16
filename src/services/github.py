@@ -31,7 +31,7 @@ class GitHubService(IGitHubService):
         return len(pull_requests)
 
     async def count_discussion_messages(self, username: str) -> int:
-        return -1 # TODO: rewrite
+        return -1  # TODO: rewrite
 
     def _calculate_lines(self, summary: list[tuple[int, int]]) -> tuple[int, int]:
         total_add = 0
