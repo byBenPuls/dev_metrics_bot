@@ -1,0 +1,70 @@
+name: Python Code Style & Lint
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+
+permissions:
+
+  contents: write
+  pull-requests: write
+
+jobs:
+  linting:
+    name: Lint source files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get repository content
+        uses: actions/checkout@v4
+
+      - name: Configure Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install project dependencies
+        run: |
+          pip install poetry
+          poetry install --no-root
+
+      - name: Run ruff lint
+        run: |
+          echo "🧹 Checking code style with Ruff"
+          poetry run ruff check . --config pyproject.toml --output-format=github
+
+  autoformat:
+
+    name: Auto-format on PRs
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Python environment
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Prepare dependencies
+        run: |
+          pip install poetry
+          poetry install --no-root
+
+      - name: Format source with Ruff
+        run: |
+          echo "✨ Reformatting code..."
+          poetry run ruff format . --config pyproject.toml
+
+      - name: Auto-commit formatted changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "style: reformat codebase using Ruff"
+
