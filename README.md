@@ -1,7 +1,7 @@
 # DevMetricsBot 🤖📊
 
 
-[![CI](https://github.com/byBenPuls/dev_metrics_bot/actions/workflows/ci.yml/badge.svg)](https://github.com/byBenPuls/dev_metrics_bot/actions/workflows/ci.yml)
+[![CI](https://github.com/byBenPuls/dev_metrics_bot/actions/workflows/ci.yml/badge.svg)](https://github.com/byBenPuls/dev_metrics_bot/actions/workflows/style.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)
 
