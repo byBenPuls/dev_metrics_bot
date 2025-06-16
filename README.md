@@ -1,10 +1,8 @@
 # DevMetricsBot 🤖📊
 
-
-[![CI](https://github.com/byBenPuls/dev_metrics_bot/actions/workflows/ci.yml/badge.svg)](https://github.com/byBenPuls/dev_metrics_bot/actions/workflows/style.yaml)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/byBenPuls/dev_metrics_bot/style.yaml)](https://github.com/byBenPuls/dev_metrics_bot/actions/workflows/style.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)
-
 
 **DevMetricsBot** is an open-source Telegram bot that helps developers quickly view GitHub profile statistics directly in chat.
 Inspired by a simple but powerful idea: 
